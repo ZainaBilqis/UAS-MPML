@@ -6,7 +6,7 @@ import numpy as np
 
 # Contoh data (X dan y harus diganti dengan dataset Anda)
 import pandas as pd
-uber = pd.read_csv("D:\\Matkul Sem 4\\MPML Phyton\\uber.csv")
+uber = pd.read_csv(uber.csv)
 
 # Menghapus baris dengan nilai NA pada lebih dari satu kolom
 check = ['dropoff_longitude', 'dropoff_latitude']
