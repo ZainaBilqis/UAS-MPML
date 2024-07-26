@@ -81,7 +81,7 @@ DT_best = DecisionTreeRegressor(random_state=42)
 DT_best.fit(X_train, y_train)
 
 # Streamlit app
-st.title("Prediksi Harga Transportasi")
+st.title("Prediksi Harga Uber")
 
 # Input dari pengguna
 jarak = st.number_input("Masukkan Jarak yang Ingin Ditempuh (m):", min_value=0.0, step=0.1)
@@ -90,6 +90,6 @@ jumlah_penumpang = st.number_input("Masukkan Jumlah Penumpang:", min_value=1, st
 # Prediksi harga
 if st.button("Prediksi Harga"):
     estimasi_harga = DT_best.predict([[jarak, jumlah_penumpang]])
-    st.write(f"Estimasi Harga untuk jarak {jarak} m dan {jumlah_penumpang} penumpang adalah: {estimasi_harga[0]:.2f}")
+    st.write(f"Estimasi Harga untuk jarak {jarak} m dan {jumlah_penumpang} penumpang adalah: ${estimasi_harga[0]:.2f}")
 
 
